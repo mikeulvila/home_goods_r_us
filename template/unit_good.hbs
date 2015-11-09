@@ -1,10 +1,9 @@
 {{#each products}}
-<p>{{name}} ${{price}} {{category_id}}</p>
+<div>
+	<h2>{{name}}</h2>
+	<ul>
+		<li>${{price}} </li>
+		<li>{{discount_category.name}}</li>
+	</ul>
+</div>
 {{/each}}
-
-
-
-
-
-
-{{$if category_id === 1}}

@@ -3,13 +3,13 @@ define(["product-loader", "discount-loader"], function(productLoader, discountLo
 	console.log("product", productLoader);
 	console.log("discount", discountLoader);
 
-	var getProdInfo = function (product) {
-	require(['hbs!../template/unit_good'], function(unit_template) {
-		console.log("working");
-		$("#apparel").append(unit_template(product));
-		});
-	};
-	productLoader.getJsonData(getProdInfo);
+	var getProductInfo = function (response) {
+			require(['hbs!../template/unit_good'], function(productTemplate) {
+				$("#products").append(productTemplate(response));
+			});
+		};
+
+	productLoader.getJsonData(getProductInfo);
 
 
 });
