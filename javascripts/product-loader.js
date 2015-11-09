@@ -5,4 +5,5 @@ define(["jquery"], function($) {
                 .done(callback); 
            }
     };
+
 });

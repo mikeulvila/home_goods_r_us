@@ -3,13 +3,23 @@ define(["product-loader", "discount-loader"], function(productLoader, discountLo
 	console.log("product", productLoader);
 	console.log("discount", discountLoader);
 
+
+
+
+// Loads initial product information to page
 	var getProdInfo = function (product) {
 	require(['hbs!../template/unit_good'], function(unit_template) {
-		console.log("working");
-		$("#apparel").append(unit_template(product));
+		$("#products").html(unit_template(product));
 		});
 	};
 	productLoader.getJsonData(getProdInfo);
+
+// Not yet functioning. Close maybe?
+
+	$(document).ready(function(e) {
+		console.log("hullo");
+		$(".department:contains('1')").html("Apparel"); 
+	});
 
 
 });

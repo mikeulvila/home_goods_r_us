@@ -1,5 +1,6 @@
 {{#each products}}
-<p>{{name}} ${{price}} {{category_id}}</p>
+<h3>{{name}} ${{price}} </h3>
+<h5 class="department">{{category_id}}</h5>
 {{/each}}
 
 
@@ -7,4 +8,4 @@
 
 
 
-{{$if category_id === 1}}
+{{!-- {{$if category_id === 1}} --}}
